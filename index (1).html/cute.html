@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year 2025</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('cutu.jpg'); /* Ensure this image path is correct */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center; /* Adjusted to center text */
+      position: relative; /* Use relative positioning for better mobile display */
+      z-index: 1;
+    }
+
+    h1, p {
+      margin: 0;
+      padding: 5px 0;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #FF5733;
+      animation: wave 2s infinite;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #E6E6FA; /* Lavender color */
+      animation: wave 2s infinite;
+    }
+
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .heart {
+      position: absolute;
+      color: red;
+      font-size: 2em;
+      animation: float 5s infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive font sizes for mobile devices */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em; /* Smaller font size for mobile */
+      }
+
+      p {
+        font-size: 1.2em; /* Adjusted paragraph size */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy New Year 2025!</h1>
+    <p>❤️ KANNULUUU ummmaaaaa</p>
+    <p>May this year bring you joy, success, and <br> endless possibilities. 🙌</p>
+    <p>Cheers to a fresh start! 🫂</p>
+    <p>With love and gratitude 😇 <br> for your endless support and care. ❤️</p>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = Math.random() * 100 + 'vh';
+      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    // Increased heart generation frequency (every 200ms)
+    setInterval(createHeart, 200);
+  </script>
+</body>
+</html>
